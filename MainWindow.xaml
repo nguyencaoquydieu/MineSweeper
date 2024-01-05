@@ -1,0 +1,133 @@
+﻿<Window x:Class="MineSweeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeper"
+        mc:Ignorable="d"
+        Title="Mine Sweeper" SizeToContent="WidthAndHeight" MinHeight="150" MinWidth="150" Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Name="lbCell0x0"  Grid.Row="0" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x1"  Grid.Row="0" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x2"  Grid.Row="0" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x3"  Grid.Row="0" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x4"  Grid.Row="0" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x5"  Grid.Row="0" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x6"  Grid.Row="0" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell0x7"  Grid.Row="0" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x0"  Grid.Row="1" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x1"  Grid.Row="1" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x2"  Grid.Row="1" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x3"  Grid.Row="1" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x4"  Grid.Row="1" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x5"  Grid.Row="1" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x6"  Grid.Row="1" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell1x7"  Grid.Row="1" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x0"  Grid.Row="2" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x1"  Grid.Row="2" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x2"  Grid.Row="2" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x3"  Grid.Row="2" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x4"  Grid.Row="2" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x5"  Grid.Row="2" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x6"  Grid.Row="2" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell2x7"  Grid.Row="2" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x0"  Grid.Row="3" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x1"  Grid.Row="3" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x2"  Grid.Row="3" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x3"  Grid.Row="3" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x4"  Grid.Row="3" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x5"  Grid.Row="3" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x6"  Grid.Row="3" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell3x7"  Grid.Row="3" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x0"  Grid.Row="4" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x1"  Grid.Row="4" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x2"  Grid.Row="4" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x3"  Grid.Row="4" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x4"  Grid.Row="4" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x5"  Grid.Row="4" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x6"  Grid.Row="4" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell4x7"  Grid.Row="4" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x0"  Grid.Row="5" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x1"  Grid.Row="5" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x2"  Grid.Row="5" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x3"  Grid.Row="5" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x4"  Grid.Row="5" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x5"  Grid.Row="5" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x6"  Grid.Row="5" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Label  Name="lbCell5x7"  Grid.Row="5" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" />
+        <Button Name="btnCell0x0" Grid.Row="0" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x1" Grid.Row="0" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x2" Grid.Row="0" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x3" Grid.Row="0" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x4" Grid.Row="0" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x5" Grid.Row="0" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x6" Grid.Row="0" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell0x7" Grid.Row="0" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x0" Grid.Row="1" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x1" Grid.Row="1" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x2" Grid.Row="1" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x3" Grid.Row="1" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x4" Grid.Row="1" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x5" Grid.Row="1" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x6" Grid.Row="1" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell1x7" Grid.Row="1" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x0" Grid.Row="2" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x1" Grid.Row="2" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x2" Grid.Row="2" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x3" Grid.Row="2" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x4" Grid.Row="2" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x5" Grid.Row="2" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x6" Grid.Row="2" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell2x7" Grid.Row="2" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x0" Grid.Row="3" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x1" Grid.Row="3" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x2" Grid.Row="3" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x3" Grid.Row="3" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x4" Grid.Row="3" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x5" Grid.Row="3" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x6" Grid.Row="3" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell3x7" Grid.Row="3" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x0" Grid.Row="4" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x1" Grid.Row="4" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x2" Grid.Row="4" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x3" Grid.Row="4" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x4" Grid.Row="4" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x5" Grid.Row="4" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x6" Grid.Row="4" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell4x7" Grid.Row="4" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x0" Grid.Row="5" Grid.Column="0" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x1" Grid.Row="5" Grid.Column="1" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x2" Grid.Row="5" Grid.Column="2" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x3" Grid.Row="5" Grid.Column="3" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x4" Grid.Row="5" Grid.Column="4" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x5" Grid.Row="5" Grid.Column="5" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x6" Grid.Row="5" Grid.Column="6" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+        <Button Name="btnCell5x7" Grid.Row="5" Grid.Column="7" Margin="2.5" Width="25" Height="25" HorizontalContentAlignment="Center" Click="btnCell_Click" IsVisibleChanged="btnCell_IsVisibleChanged" />
+
+        <Label  Name="lbBombAmountLeft" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="2.5" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" >11</Label>
+        <Button Name="btnResetGame"     Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" Margin="2.5" Click="btnResetGame_Click" >Reset</Button>
+        <Button Name="btnStartGame"     Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="8" Margin="2.5" Click="btnStartGame_Click"  Content="{Binding sContentBtnStartGame}" Loaded="btnStartGame_Loaded" />
+    </Grid>
+</Window>
